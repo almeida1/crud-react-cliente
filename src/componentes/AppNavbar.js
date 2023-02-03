@@ -27,7 +27,7 @@ const AppNavbar = () => {
       <Collapse isOpen={isOpen} navbar>
         <Nav className="justify-content-end" style={{ width: "100%" }} navbar>
           <NavItem>
-            <NavLink href="//http://www.fateczl.edu.br">Fatec ZL</NavLink>
+            <NavLink href="http://www.fateczl.edu.br/inicio">Fatec ZL</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://reactjs.org/">React JS</NavLink>

@@ -67,17 +67,20 @@ const CadastrarCliente = () => {
                 value={cliente.nome}
                 errorMessage="Username should be 3-16 characters and shouldn't include any special character!"
                 onChange={handleChange}
+                required
               />
             </FormGroup>
             <FormGroup>
               <Label for="dataNascimento">Data Nascimento</Label>
               <Input
-                type="date"
+                type="text"
+                format="DD/MM/YYYY"
                 name="dataNascimento"
                 id="dataNascimento"
                 value={cliente.dataNascimento || ""}
                 onChange={handleChange}
                 autoComplete="address-level1"
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -89,6 +92,7 @@ const CadastrarCliente = () => {
                 value={cliente.sexo || ""}
                 onChange={handleChange}
                 autoComplete="address-level1"
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -100,6 +104,7 @@ const CadastrarCliente = () => {
                 value={cliente.cpf || ""}
                 onChange={handleChange}
                 autoComplete="address-level1"
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -111,6 +116,7 @@ const CadastrarCliente = () => {
                 value={cliente.cep || ""}
                 onChange={handleChange}
                 autoComplete="address-level1"
+                required
               />
             </FormGroup>
             <FormGroup>
@@ -122,6 +128,7 @@ const CadastrarCliente = () => {
                 value={cliente.complemento || ""}
                 onChange={handleChange}
                 autoComplete="address-level1"
+                required
               />
             </FormGroup>
             {/* Form botao save / cancel  */}
