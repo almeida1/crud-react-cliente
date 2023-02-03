@@ -15,6 +15,7 @@ const CadastrarCliente = () => {
     complemento: "",
   };
   const [cliente, setLista] = useState(initialFormState);
+  const [mensagem, setMensagem] = useState();
   const navigate = useNavigate();
   // const { id } = useParams();
 
@@ -41,8 +42,9 @@ const CadastrarCliente = () => {
       body: JSON.stringify(cliente),
     });
     if (!response.ok) {
-      const message = `Ocorreu um errro : ${response.status}`;
-      console.log({ message });
+      alert(`Ocorreu um errro : ${response.status}`);
+      setMensagem(response.status);
+      console.log({ mensagem });
       console.log("body => ", response.message);
     }
     setLista(initialFormState);
