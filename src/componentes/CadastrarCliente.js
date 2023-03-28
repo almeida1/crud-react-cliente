@@ -33,13 +33,12 @@ const CadastrarCliente = () => {
     event.preventDefault();
     console.log("clicado save");
 
-    const response = await fetch(`http://localhost:8080/api/v1/clientes/`, {
+    const response = await fetch(`http://localhost:8080/api/v1/clientes`, {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
       body: JSON.stringify(cliente),
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+      },
     });
     if (!response.ok) {
       alert(`Ocorreu um errro : ${response.status}`);
